@@ -1,0 +1,22 @@
+<% if (success || error) { %>
+  <div id="notifiy" class="notification">
+    <% if (success) { %>
+      <div class="success message">
+        <p><%= success %></p>
+      </div>
+    <% } %>
+    <% if (error) { %>
+      <div class="error message">
+        <p><%= error %></p>
+      </div>
+    <% } %>
+  </div>
+<% } %>
+<script>
+  window.onload = function() {
+    if (!window.notifiy) return false
+    setTimeout(function() {
+      notifiy.style.display = 'none'
+    }, 3000)
+  }
+</script>

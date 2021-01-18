@@ -1,0 +1,9 @@
+<%- include('common/header') %>
+
+<div class="container posts">
+  <% posts.forEach(function (post) { %>
+    <%- include('components/post-content', { post: post }) %>
+  <% }) %>
+</div>
+
+<%- include('common/footer') %>

@@ -1,0 +1,23 @@
+<header class="header">
+  <nav class="nav">
+    <% if(user) { %>
+    <span class="nav-label <%= active === 'author' ? 'active' : '' %>">
+      <a class="nav-item" href="/posts?author=<%= user._id %>">个人主页</a>
+    </span>
+    <span class="nav-label <%= active === 'create' ? 'active' : '' %>">
+      <a class="nav-item" href="/posts/create">发表文章</a>
+    </span>
+    <span class="nav-label <%= active === 'signout' ? 'active' : '' %>">
+      <a class="nav-item" href="/signout">登出</a>
+    </span>
+    <% } else { %>
+    <span class="nav-label <%= active === 'signin' ? 'active' : '' %>">
+      <a class="nav-item" href="/signin">登录</a>
+    </span>
+    <span class="nav-label <%= active === 'signup' ? 'active' : '' %>">
+      <a class="nav-item" href="/signup">注册</a>
+    </span>
+    <% } %>
+  </nav>
+  <div class="header-bg"></div>
+</header>
